@@ -1,21 +1,24 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const depoimentos = [
   {
-    texto: "Depois do site, começamos a receber contatos pelo Google todos os dias. Valeu muito o investimento!",
+    texto: "Eu achava que site era coisa cara e complicada. Em uma semana estava tudo pronto e já recebi 3 ligações do Google no primeiro mês!",
     nome: "João Silva",
     empresa: "Loja de Autopeças",
+    resultado: "+3 clientes/mês pelo Google",
   },
   {
-    texto: "Profissionais excelentes! Meu consultório agora aparece no Google Maps e a agenda está sempre cheia.",
+    texto: "Minha agenda vivia vazia. Depois que apareci no Google Maps, passei a receber pacientes que nem conheciam o consultório. Foi a melhor decisão.",
     nome: "Dra. Maria Costa",
     empresa: "Clínica Dental",
+    resultado: "Agenda 80% mais cheia",
   },
   {
-    texto: "Nosso restaurante triplicou as reservas depois que fizemos o site e configuramos o Google. Recomendo demais!",
+    texto: "Nosso restaurante triplicou as reservas. As pessoas pesquisam 'restaurante perto de mim' e nos encontram. Isso mudou tudo!",
     nome: "Carlos Mendes",
     empresa: "Restaurante Sabor & Arte",
+    resultado: "3x mais reservas",
   },
 ];
 
@@ -30,8 +33,12 @@ const ProvaSocialSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Empresas que já confiaram no nosso trabalho
+            Não acredite só na gente.{" "}
+            <span className="text-primary">Veja o que nossos clientes dizem.</span>
           </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            Empresários reais, com resultados reais.
+          </p>
         </motion.div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-8">
@@ -42,14 +49,19 @@ const ProvaSocialSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-8 border border-border shadow-sm text-left"
+              className="bg-card rounded-2xl p-8 border border-border shadow-sm text-left relative"
             >
+              <Quote size={32} className="text-primary/10 absolute top-6 right-6" />
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
                   <Star key={j} size={18} className="fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-foreground mb-6 italic leading-relaxed">"{d.texto}"</p>
+              <p className="text-foreground mb-4 leading-relaxed">"{d.texto}"</p>
+              {/* Resultado concreto - prova tangível */}
+              <div className="bg-secondary/10 rounded-lg px-3 py-2 mb-4 inline-block">
+                <span className="text-sm font-bold text-secondary">📈 {d.resultado}</span>
+              </div>
               <div>
                 <p className="font-bold text-foreground">{d.nome}</p>
                 <p className="text-sm text-muted-foreground">{d.empresa}</p>

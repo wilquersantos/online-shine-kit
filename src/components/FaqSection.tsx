@@ -8,24 +8,28 @@ import {
 
 const faqs = [
   {
-    pergunta: "Preciso ter logo para criar o site?",
-    resposta: "Não! Se você ainda não tem uma logo, podemos ajudar a criar uma identidade visual para seu negócio.",
+    pergunta: "Preciso entender de tecnologia?",
+    resposta: "Absolutamente não. Nós cuidamos de tudo — do design ao código, da configuração ao Google. Você só precisa nos contar sobre seu negócio.",
   },
   {
-    pergunta: "Quanto tempo leva para o site ficar pronto?",
-    resposta: "Em média, entre 5 e 10 dias úteis, dependendo da complexidade do projeto.",
+    pergunta: "Preciso ter logo para criar o site?",
+    resposta: "Não! Se você ainda não tem uma logo, podemos ajudar a criar uma identidade visual. Isso não vai atrasar nada.",
+  },
+  {
+    pergunta: "Em quanto tempo fico pronto?",
+    resposta: "Entre 5 e 10 dias úteis. Sim, é rápido. Enquanto seus concorrentes pensam em fazer, você já vai estar aparecendo no Google.",
   },
   {
     pergunta: "Preciso pagar mensalidade?",
-    resposta: "Não necessariamente. O pagamento pode ser único. A mensalidade é opcional, apenas se quiser suporte e manutenção contínuos.",
+    resposta: "Não. O investimento é único. A mensalidade é opcional, apenas para quem quiser suporte e manutenção contínuos. Sem surpresas, sem letras miúdas.",
   },
   {
-    pergunta: "Meu site vai aparecer no Google?",
-    resposta: "Sim! Todos os nossos sites são otimizados para aparecer no Google. No plano com Google, também configuramos seu perfil no Google Maps.",
+    pergunta: "E se eu não gostar do resultado?",
+    resposta: "Trabalhamos junto com você. Mostramos o progresso e fazemos ajustes até você ficar 100% satisfeito antes de publicar.",
   },
   {
-    pergunta: "Vocês atendem em qual região?",
-    resposta: "Atendemos todo o Brasil de forma online. Trabalhamos remotamente para entregar o melhor resultado para você.",
+    pergunta: "Meu site vai realmente aparecer no Google?",
+    resposta: "Sim! Todos os nossos sites são otimizados para o Google. Nos planos com Google, também configuramos seu perfil no Google Maps — e nossos clientes já relatam resultados nas primeiras semanas.",
   },
 ];
 
@@ -41,10 +45,13 @@ const FaqSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Perguntas Frequentes
+            Ainda tem alguma dúvida?
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Tire suas dúvidas antes de entrar em contato.
+            Respondemos as perguntas mais comuns. Se não encontrar a sua,{" "}
+            <a href="#contato" className="text-primary font-semibold hover:underline">
+              é só chamar no WhatsApp
+            </a>.
           </p>
         </motion.div>
 
