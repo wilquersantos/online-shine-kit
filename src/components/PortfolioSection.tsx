@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const projetos = [
-  { nome: "Loja AutoPeças Silva", tipo: "Site + Google", cor: "bg-primary/10" },
-  { nome: "Clínica Dental Sorriso", tipo: "Site Profissional", cor: "bg-secondary/10" },
-  { nome: "Restaurante Sabor & Arte", tipo: "Site + Google Maps", cor: "bg-primary/10" },
-  { nome: "Oficina Mecânica Central", tipo: "Presença Digital", cor: "bg-secondary/10" },
+  { nome: "Delícias Leves", tipo: "Site Profissional", cor: "bg-secondary/10", url: "https://deliciasleves.shop/" },
+  { nome: "Arte Devocional", tipo: "Site + Loja Online", cor: "bg-primary/10", url: "https://artedevocional.store/" },
+  { nome: "Bordados Lucrativos", tipo: "Site Profissional", cor: "bg-secondary/10", url: "https://bordadoslucrativos.com/" },
+  { nome: "Inovar Drywall", tipo: "Site + Google", cor: "bg-primary/10", url: "https://www.inovardrywall.com/" },
 ];
 
 const PortfolioSection = () => {
@@ -28,13 +28,12 @@ const PortfolioSection = () => {
 
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {projetos.map((p, i) => (
-            <motion.div
+            <a
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all"
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all block"
             >
               <div className={`${p.cor} h-48 flex items-center justify-center`}>
                 <div className="w-3/4 bg-card/80 rounded-lg p-4 shadow-sm backdrop-blur-sm">
@@ -55,7 +54,7 @@ const PortfolioSection = () => {
                 </div>
                 <ExternalLink className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
               </div>
-            </motion.div>
+            </a>
           ))}
         </div>
       </div>
