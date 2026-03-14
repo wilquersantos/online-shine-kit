@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Monitor, Smartphone, MapPin } from "lucide-react";
+import { ArrowRight, MessageCircle, Monitor, Smartphone, MapPin, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl" />
@@ -18,30 +17,61 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide uppercase rounded-full bg-accent text-accent-foreground">
-              Agência Digital
+            {/* Micro-compromisso: badge que gera curiosidade */}
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide uppercase rounded-full bg-secondary/10 text-secondary">
+              <Zap size={14} /> +50 empresas já transformadas
             </span>
+
+            {/* Headline: promessa clara + resultado tangível em 3 segundos */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
-              Coloque sua empresa no{" "}
-              <span className="text-primary">Google</span> e comece a receber
-              clientes todos os dias
+              Imagine seu telefone{" "}
+              <span className="text-primary">tocando todos os dias</span> com
+              novos clientes
             </h1>
+
+            {/* Subheadline: espelhamento + como (reduz atrito) */}
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Criamos sites profissionais e configuramos seu perfil no Google
-              para que seu negócio seja encontrado por novos clientes.
+              Você cuida do seu negócio, nós cuidamos de colocar ele no Google.
+              Em poucos dias, pessoas da sua cidade vão te encontrar quando
+              pesquisarem o que você oferece.
             </p>
+
+            {/* Prova social rápida - gera confiança instantânea */}
+            <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex -space-x-2">
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background flex items-center justify-center"
+                  >
+                    <Users size={12} className="text-primary" />
+                  </div>
+                ))}
+              </div>
+              <span>
+                <strong className="text-foreground">+50 empresários</strong>{" "}
+                já escolheram aparecer no Google
+              </span>
+            </div>
+
+            {/* CTAs: ação principal + ação de baixo compromisso */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-base gap-2">
                 <a href="#planos">
-                  Criar meu site <ArrowRight size={18} />
+                  Quero mais clientes <ArrowRight size={18} />
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-base gap-2">
                 <a href="#contato">
-                  <MessageCircle size={18} /> Falar no WhatsApp
+                  <MessageCircle size={18} /> É rápido, fale conosco
                 </a>
               </Button>
             </div>
+
+            {/* Redutor de objeção */}
+            <p className="mt-4 text-xs text-muted-foreground">
+              ✓ Sem mensalidade obrigatória &nbsp; ✓ Resultado em até 10 dias &nbsp; ✓ Orçamento grátis
+            </p>
           </motion.div>
 
           <motion.div
@@ -50,9 +80,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative hidden lg:block"
           >
-            {/* Mockup visual */}
             <div className="relative">
-              {/* Desktop mockup */}
               <div className="bg-card rounded-2xl shadow-2xl border border-border p-3">
                 <div className="flex gap-1.5 mb-3">
                   <div className="w-3 h-3 rounded-full bg-destructive/60" />
@@ -74,7 +102,6 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Phone mockup */}
               <div className="absolute -bottom-6 -left-8 w-36 bg-card rounded-2xl shadow-xl border border-border p-2">
                 <div className="bg-muted rounded-lg p-3 space-y-2">
                   <div className="flex items-center gap-2">
@@ -86,11 +113,22 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Floating badge */}
+              {/* Badge de resultado - prova tangível */}
               <div className="absolute -top-4 -right-4 bg-secondary text-secondary-foreground rounded-xl px-4 py-2 shadow-lg flex items-center gap-2 text-sm font-semibold">
                 <Smartphone size={16} />
-                Responsivo
+                100% Responsivo
               </div>
+
+              {/* Notificação flutuante - gatilho visual de resultado */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.2, repeat: Infinity, repeatType: "reverse", repeatDelay: 3 }}
+                className="absolute -bottom-4 -right-6 bg-card rounded-xl px-4 py-2.5 shadow-xl border border-border flex items-center gap-2"
+              >
+                <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+                <span className="text-xs font-medium text-foreground">Novo cliente encontrou você!</span>
+              </motion.div>
             </div>
           </motion.div>
         </div>

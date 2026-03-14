@@ -1,43 +1,51 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Star, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const planos = [
   {
     nome: "Essencial",
-    desc: "Ideal para quem está começando",
+    desc: "Para sair do zero e ter presença online",
     destaque: false,
+    icon: Zap,
     features: [
-      "Site profissional",
-      "Design responsivo",
-      "Formulário de contato",
+      "Site profissional e moderno",
+      "Design responsivo (celular e PC)",
+      "Formulário de contato com WhatsApp",
       "Até 5 páginas",
+      "Entrega em até 7 dias",
     ],
+    cta: "Começar agora",
   },
   {
     nome: "Presença no Google",
-    desc: "O mais escolhido",
+    desc: "Escolhido por 8 de cada 10 clientes",
     destaque: true,
+    icon: Star,
     features: [
-      "Site profissional",
-      "Design responsivo",
-      "Formulário de contato",
-      "Criação do perfil no Google",
-      "Otimização inicial",
+      "Tudo do plano Essencial",
+      "Perfil completo no Google Maps",
+      "Otimização para aparecer nas buscas",
       "Até 8 páginas",
+      "Entrega em até 10 dias",
+      "Suporte na primeira semana",
     ],
+    cta: "Quero aparecer no Google",
   },
   {
     nome: "Completo",
-    desc: "Para resultados máximos",
+    desc: "Para quem quer resultado máximo",
     destaque: false,
+    icon: Shield,
     features: [
       "Tudo do plano anterior",
       "Suporte por 30 dias",
-      "Otimização avançada",
+      "Otimização avançada de SEO",
       "Páginas ilimitadas",
       "Integração com redes sociais",
+      "Relatório de desempenho",
     ],
+    cta: "Quero o pacote completo",
   },
 ];
 
@@ -52,10 +60,10 @@ const PlanosSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Escolha o plano ideal para o seu negócio
+            Invista uma vez, <span className="text-primary">colha resultados todos os dias</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Planos flexíveis para cada momento do seu negócio.
+            Sem mensalidade obrigatória. Sem surpresas. Você escolhe o que faz sentido para o momento do seu negócio.
           </p>
         </motion.div>
 
@@ -74,14 +82,21 @@ const PlanosSection = () => {
               }`}
             >
               {p.destaque && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-bold px-4 py-1 rounded-full">
-                  MAIS POPULAR
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                  ⭐ MAIS ESCOLHIDO
                 </span>
               )}
-              <h3 className="text-2xl font-bold mb-1">{p.nome}</h3>
-              <p className={`text-sm mb-6 ${p.destaque ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                {p.desc}
-              </p>
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${p.destaque ? "bg-primary-foreground/20" : "bg-primary/10"}`}>
+                  <p.icon size={20} className={p.destaque ? "text-primary-foreground" : "text-primary"} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold">{p.nome}</h3>
+                  <p className={`text-xs ${p.destaque ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                    {p.desc}
+                  </p>
+                </div>
+              </div>
               <ul className="space-y-3 mb-8">
                 {p.features.map((f, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm">
@@ -96,8 +111,12 @@ const PlanosSection = () => {
                 className="w-full"
                 size="lg"
               >
-                <a href="#contato">Solicitar Orçamento</a>
+                <a href="#contato">{p.cta}</a>
               </Button>
+              {/* Redutor de risco */}
+              <p className={`text-center text-xs mt-3 ${p.destaque ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
+                Pagamento único · Sem surpresas
+              </p>
             </motion.div>
           ))}
         </div>

@@ -1,21 +1,24 @@
 import { motion } from "framer-motion";
-import { Globe, MapPin, TrendingUp } from "lucide-react";
+import { Globe, MapPin, TrendingUp, ArrowRight } from "lucide-react";
 
 const servicos = [
   {
     icon: Globe,
-    titulo: "Criação de Sites Profissionais",
-    desc: "Sites rápidos, modernos e feitos para gerar clientes. Design responsivo e otimizado.",
+    titulo: "Site que Vende por Você",
+    desc: "Não é só um site bonito. É uma máquina de gerar contatos. Rápido, profissional e feito para transformar visitantes em clientes.",
+    resultado: "Clientes te encontram 24h por dia",
   },
   {
     icon: MapPin,
-    titulo: "Perfil Profissional no Google",
-    desc: "Configuramos seu negócio no Google para aparecer nas pesquisas e no Google Maps.",
+    titulo: "Seu Negócio no Google Maps",
+    desc: "Quando alguém pesquisar o que você faz na sua cidade, sua empresa vai aparecer ali — com foto, endereço e avaliações.",
+    resultado: "Ligações diretas do Google",
   },
   {
     icon: TrendingUp,
-    titulo: "Posicionamento Digital",
-    desc: "Seu negócio pronto para ser encontrado online por quem está procurando o que você oferece.",
+    titulo: "Presença Digital Completa",
+    desc: "Seu negócio organizado na internet. Site, Google, redes sociais conectados — tudo passando profissionalismo e confiança.",
+    resultado: "Imagem profissional que gera confiança",
   },
 ];
 
@@ -30,10 +33,10 @@ const SolucaoSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Nós colocamos sua empresa no <span className="text-primary">mapa digital</span>
+            Nós fazemos seu telefone <span className="text-primary">tocar com clientes novos</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Oferecemos tudo que seu negócio precisa para começar a atrair clientes pela internet.
+            Enquanto você foca no que sabe fazer, nós colocamos sua empresa na frente de quem está procurando exatamente o que você oferece.
           </p>
         </motion.div>
 
@@ -45,13 +48,18 @@ const SolucaoSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group"
+              className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group text-left"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary/20 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <s.icon className="text-primary" size={28} />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{s.titulo}</h3>
-              <p className="text-muted-foreground">{s.desc}</p>
+              <p className="text-muted-foreground mb-4">{s.desc}</p>
+              {/* Resultado tangível - o que o cliente ganha */}
+              <div className="flex items-center gap-2 text-sm font-semibold text-primary">
+                <ArrowRight size={16} />
+                {s.resultado}
+              </div>
             </motion.div>
           ))}
         </div>
