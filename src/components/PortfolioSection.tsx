@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const projetos = [
-  { nome: "Delícias Leves", tipo: "Site Profissional", cor: "bg-secondary/10", url: "https://deliciasleves.shop/" },
-  { nome: "Arte Devocional", tipo: "Site + Loja Online", cor: "bg-primary/10", url: "https://artedevocional.store/" },
-  { nome: "Bordados Lucrativos", tipo: "Site Profissional", cor: "bg-secondary/10", url: "https://bordadoslucrativos.com/" },
-  { nome: "Inovar Drywall", tipo: "Site + Google", cor: "bg-primary/10", url: "https://www.inovardrywall.com/" },
+  { nome: "Delícias Leves", tipo: "Site Profissional", url: "https://deliciasleves.shop/", img: "/portfolio/deliciasleves.png" },
+  { nome: "Arte Devocional", tipo: "Site + Loja Online", url: "https://artedevocional.store/", img: "/portfolio/artedevocional.png" },
+  { nome: "Bordados Lucrativos", tipo: "Site Profissional", url: "https://bordadoslucrativos.com/", img: "/portfolio/bordadoslucrativos.png" },
+  { nome: "Inovar Drywall", tipo: "Site + Google", url: "https://www.inovardrywall.com/", img: "/portfolio/inovardrywall.png" },
 ];
 
 const PortfolioSection = () => {
@@ -35,17 +35,13 @@ const PortfolioSection = () => {
               rel="noopener noreferrer"
               className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all block"
             >
-              <div className={`${p.cor} h-48 flex items-center justify-center`}>
-                <div className="w-3/4 bg-card/80 rounded-lg p-4 shadow-sm backdrop-blur-sm">
-                  <div className="h-2 w-1/3 bg-primary/30 rounded mb-3" />
-                  <div className="h-1.5 w-full bg-border rounded mb-2" />
-                  <div className="h-1.5 w-2/3 bg-border rounded mb-3" />
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="h-8 bg-muted rounded" />
-                    <div className="h-8 bg-muted rounded" />
-                    <div className="h-8 bg-muted rounded" />
-                  </div>
-                </div>
+              <div className="h-52 sm:h-60 overflow-hidden">
+                <img
+                  src={p.img}
+                  alt={`Preview do site ${p.nome}`}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
               <div className="p-5 flex items-center justify-between">
                 <div className="text-left">
