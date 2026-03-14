@@ -28,13 +28,12 @@ const PortfolioSection = () => {
 
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {projetos.map((p, i) => (
-            <motion.div
+            <a
               key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all"
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all block"
             >
               <div className={`${p.cor} h-48 flex items-center justify-center`}>
                 <div className="w-3/4 bg-card/80 rounded-lg p-4 shadow-sm backdrop-blur-sm">
@@ -55,7 +54,7 @@ const PortfolioSection = () => {
                 </div>
                 <ExternalLink className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
               </div>
-            </motion.div>
+            </a>
           ))}
         </div>
       </div>
