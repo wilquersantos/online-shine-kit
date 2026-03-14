@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const projetos = [
-  { nome: "Loja AutoPeças Silva", tipo: "Site + Google", cor: "bg-primary/10" },
-  { nome: "Clínica Dental Sorriso", tipo: "Site Profissional", cor: "bg-secondary/10" },
-  { nome: "Restaurante Sabor & Arte", tipo: "Site + Google Maps", cor: "bg-primary/10" },
-  { nome: "Oficina Mecânica Central", tipo: "Presença Digital", cor: "bg-secondary/10" },
+  { nome: "Delícias Leves", tipo: "Site Profissional", cor: "bg-secondary/10", url: "https://deliciasleves.shop/" },
+  { nome: "Arte Devocional", tipo: "Site + Loja Online", cor: "bg-primary/10", url: "https://artedevocional.store/" },
+  { nome: "Bordados Lucrativos", tipo: "Site Profissional", cor: "bg-secondary/10", url: "https://bordadoslucrativos.com/" },
+  { nome: "Inovar Drywall", tipo: "Site + Google", cor: "bg-primary/10", url: "https://www.inovardrywall.com/" },
 ];
 
 const PortfolioSection = () => {
