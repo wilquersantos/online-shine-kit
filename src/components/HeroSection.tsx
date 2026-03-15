@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Monitor, Smartphone, MapPin, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { fireConfetti } from "@/hooks/use-confetti";
 
 const HeroSection = () => {
   return (
