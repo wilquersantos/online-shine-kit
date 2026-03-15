@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Mail, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { fireConfetti } from "@/hooks/use-confetti";
 
 const CtaSection = () => {
   return (
