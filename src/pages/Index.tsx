@@ -1,3 +1,4 @@
+import { BeamsBackground } from "@/components/ui/beams-background";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProblemaSection from "@/components/ProblemaSection";
@@ -12,19 +13,21 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <ProblemaSection />
-      <SolucaoSection />
-      <ComoFuncionaSection />
-      <PortfolioSection />
-      <ProvaSocialSection />
-      <PlanosSection />
-      <CtaSection />
-      <FaqSection />
-      <Footer />
-    </div>
+    <BeamsBackground intensity="subtle">
+      <div className="relative z-10">
+        <Navbar />
+        <HeroSection />
+        <ProblemaSection />
+        <SolucaoSection />
+        <ComoFuncionaSection />
+        <PortfolioSection />
+        <ProvaSocialSection />
+        <PlanosSection />
+        <CtaSection />
+        <FaqSection />
+        <Footer />
+      </div>
+    </BeamsBackground>
   );
 };
 
