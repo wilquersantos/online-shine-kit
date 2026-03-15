@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Star, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { fireConfetti } from "@/hooks/use-confetti";
 
 const planos = [
   {
@@ -111,7 +110,6 @@ const PlanosSection = () => {
                 variant={p.destaque ? "secondary" : "default"}
                 className="w-full"
                 size="lg"
-                onClick={fireConfetti}
               >
                 <a href="#contato">{p.cta}</a>
               </Button>
