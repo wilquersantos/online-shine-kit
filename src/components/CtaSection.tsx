@@ -45,7 +45,7 @@ const CtaSection = () => {
               size="lg"
               variant="outline"
               asChild
-              className="text-base gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="text-base gap-2 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
             >
               <a href="mailto:contato@digitalpro.com.br">
                 <Mail size={20} /> Solicitar orçamento grátis
