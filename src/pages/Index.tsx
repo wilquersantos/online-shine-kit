@@ -9,10 +9,18 @@ import PlanosSection from "@/components/PlanosSection";
 import CtaSection from "@/components/CtaSection";
 import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
+import { WarpBackground } from "@/components/ui/warp-background";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <WarpBackground
+      className="min-h-screen bg-background rounded-none"
+      perspective={150}
+      beamsPerSide={4}
+      beamSize={3}
+      beamDelayMax={5}
+      beamDuration={4}
+    >
       <Navbar />
       <HeroSection />
       <ProblemaSection />
@@ -24,7 +32,7 @@ const Index = () => {
       <CtaSection />
       <FaqSection />
       <Footer />
-    </div>
+    </WarpBackground>
   );
 };
 
