@@ -1,3 +1,4 @@
+import { BeamsBackground } from "@/components/ui/beams-background";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProblemaSection from "@/components/ProblemaSection";
