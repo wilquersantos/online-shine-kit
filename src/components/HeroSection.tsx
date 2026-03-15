@@ -57,12 +57,12 @@ const HeroSection = () => {
 
             {/* CTAs: ação principal + ação de baixo compromisso */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" asChild className="text-base gap-2">
+              <Button size="lg" asChild className="text-base gap-2" onClick={fireConfetti}>
                 <a href="#planos">
                   Quero mais clientes <ArrowRight size={18} />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-base gap-2">
+              <Button size="lg" variant="outline" asChild className="text-base gap-2" onClick={fireConfetti}>
                 <a href="#contato">
                   <MessageCircle size={18} /> É rápido, fale conosco
                 </a>

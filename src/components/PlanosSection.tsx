@@ -111,6 +111,7 @@ const PlanosSection = () => {
                 variant={p.destaque ? "secondary" : "default"}
                 className="w-full"
                 size="lg"
+                onClick={fireConfetti}
               >
                 <a href="#contato">{p.cta}</a>
               </Button>

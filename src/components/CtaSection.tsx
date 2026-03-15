@@ -37,6 +37,7 @@ const CtaSection = () => {
               variant="secondary"
               asChild
               className="text-base gap-2"
+              onClick={fireConfetti}
             >
               <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={20} /> Quero meu site agora
@@ -47,6 +48,7 @@ const CtaSection = () => {
               variant="outline"
               asChild
               className="text-base gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              onClick={fireConfetti}
             >
               <a href="mailto:contato@digitalpro.com.br">
                 <Mail size={20} /> Solicitar orçamento grátis
