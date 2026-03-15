@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -12,6 +13,12 @@ import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+    }
+  }, []);
   return (
     <BeamsBackground intensity="medium">
       <Navbar />
