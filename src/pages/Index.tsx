@@ -13,20 +13,18 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <BeamsBackground intensity="subtle">
-      <div className="relative z-10">
-        <Navbar />
-        <HeroSection />
-        <ProblemaSection />
-        <SolucaoSection />
-        <ComoFuncionaSection />
-        <PortfolioSection />
-        <ProvaSocialSection />
-        <PlanosSection />
-        <CtaSection />
-        <FaqSection />
-        <Footer />
-      </div>
+    <BeamsBackground intensity="medium">
+      <Navbar />
+      <HeroSection />
+      <ProblemaSection />
+      <SolucaoSection />
+      <ComoFuncionaSection />
+      <PortfolioSection />
+      <ProvaSocialSection />
+      <PlanosSection />
+      <CtaSection />
+      <FaqSection />
+      <Footer />
     </BeamsBackground>
   );
 };
