@@ -167,23 +167,25 @@ export function BeamsBackground({
     return (
         <div
             className={cn(
-                "relative min-h-screen w-full overflow-hidden",
+                "relative min-h-screen w-full overflow-hidden bg-background",
                 className
             )}
         >
             <canvas
                 ref={canvasRef}
-                className="fixed inset-0 -z-10"
+                className="fixed inset-0 z-0 pointer-events-none"
                 style={{ filter: "blur(15px)" }}
             />
             <motion.div
-                className="fixed inset-0 -z-10"
+                className="fixed inset-0 z-0 pointer-events-none"
                 style={{
                     background:
                         "radial-gradient(circle at 50% 50%, hsla(var(--primary), 0.08) 0%, transparent 70%)",
                 }}
             />
-            {children}
+            <div className="relative z-10">
+                {children}
+            </div>
         </div>
     );
 }
