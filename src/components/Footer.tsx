@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-background/10 text-center text-sm text-background/40">
-          © {new Date().getFullYear()} DigitalPro. Todos os direitos reservados.
+          © {new Date().getFullYear()} ClickImpulso. Todos os direitos reservados.
         </div>
       </div>
     </footer>

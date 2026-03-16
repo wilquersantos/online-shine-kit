@@ -60,7 +60,7 @@ const HeroSection = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-base gap-2">
                 <a href="#planos">
-                  Quero mais clientes <ArrowRight size={18} />
+                  Quero aparecer no Google <ArrowRight size={18} />
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-base gap-2">
