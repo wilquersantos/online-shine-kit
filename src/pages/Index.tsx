@@ -33,6 +33,7 @@ const Index = () => {
       <CtaSection />
       <FaqSection />
       <Footer />
+      <WhatsAppButton />
     </BeamsBackground>
   );
 };
