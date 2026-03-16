@@ -85,7 +85,7 @@ const planos = [
       "SEO avançado",
       "Otimização contínua do Google Maps",
       "Criação de novas páginas de conversão",
-      "Automação de WhatsApp",
+      
       "Relatórios mensais de resultados",
       "Estratégia digital contínua",
     ],
