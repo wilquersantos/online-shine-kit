@@ -72,7 +72,7 @@ const HeroSection = () => {
 
             {/* Redutor de objeção */}
             <p className="mt-4 text-xs text-muted-foreground">
-              ✓ Sem mensalidade obrigatória &nbsp; ✓ Resultado em até 10 dias &nbsp; ✓ Orçamento grátis
+              ✓ Resultado em até 10 dias &nbsp; ✓ Orçamento grátis &nbsp; ✓ Suporte incluso
             </p>
           </motion.div>
 

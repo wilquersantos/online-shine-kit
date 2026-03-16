@@ -53,16 +53,16 @@ const CtaSection = () => {
             </Button>
           </div>
 
-          {/* Redutores de objeção finais */}
+          {/* Garantias */}
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-primary-foreground/70">
             <span className="flex items-center gap-1.5">
-              <Shield size={14} /> Sem compromisso
+              <Shield size={14} /> Orçamento gratuito
             </span>
             <span className="flex items-center gap-1.5">
               <Clock size={14} /> Resposta em até 2h
             </span>
             <span className="flex items-center gap-1.5">
-              <MessageCircle size={14} /> Conversa sem pressão
+              <MessageCircle size={14} /> Atendimento humanizado
             </span>
           </div>
         </motion.div>
