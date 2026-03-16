@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">DigitalPro</h3>
+            <h3 className="text-xl font-bold mb-4">ClickImpulso</h3>
             <p className="text-background/60 text-sm">
               Colocamos sua empresa na internet para que você receba clientes todos os dias.
             </p>
