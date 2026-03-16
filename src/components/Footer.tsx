@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">DigitalPro</h3>
+            <h3 className="text-xl font-bold mb-4">ClickImpulso</h3>
             <p className="text-background/60 text-sm">
               Colocamos sua empresa na internet para que você receba clientes todos os dias.
             </p>
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-background/10 text-center text-sm text-background/40">
-          © {new Date().getFullYear()} DigitalPro. Todos os direitos reservados.
+          © {new Date().getFullYear()} ClickImpulso. Todos os direitos reservados.
         </div>
       </div>
     </footer>

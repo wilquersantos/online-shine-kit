@@ -24,16 +24,18 @@ const HeroSection = () => {
 
             {/* Headline: promessa clara + resultado tangível em 3 segundos */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
-              Imagine seu telefone{" "}
-              <span className="text-primary">tocando todos os dias</span> com
-              novos clientes
+              Seu negócio aparecendo{" "}
+              <span className="text-primary">todos os dias no Google</span>
             </h1>
 
-            {/* Subheadline: espelhamento + como (reduz atrito) */}
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Você cuida do seu negócio, nós cuidamos de colocar ele no Google.
-              Em poucos dias, pessoas da sua cidade vão te encontrar quando
-              pesquisarem o que você oferece.
+            {/* Slogan */}
+            <p className="mt-4 text-xl font-medium text-foreground/80 max-w-xl">
+              Um clique para colocar sua empresa na frente de quem procura.
+            </p>
+
+            {/* Subheadline */}
+            <p className="mt-3 text-lg text-muted-foreground max-w-xl">
+              Criamos sites, posicionamos sua empresa no Google e atraímos novos clientes todos os dias.
             </p>
 
             {/* Prova social rápida - gera confiança instantânea */}
@@ -58,7 +60,7 @@ const HeroSection = () => {
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="text-base gap-2">
                 <a href="#planos">
-                  Quero mais clientes <ArrowRight size={18} />
+                  Quero aparecer no Google <ArrowRight size={18} />
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-base gap-2">
