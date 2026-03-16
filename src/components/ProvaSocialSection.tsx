@@ -3,10 +3,10 @@ import { Star, Quote } from "lucide-react";
 
 const depoimentos = [
   {
-    texto: "Eu achava que site era coisa cara e complicada. Em uma semana estava tudo pronto e já recebi 3 ligações do Google no primeiro mês!",
+    texto: "Eu mal recebia 5 ligações por semana. Depois do site, foram 12 ligações nos primeiros 15 dias — só pelo Google!",
     nome: "João Silva",
     empresa: "Loja de Autopeças",
-    resultado: "+3 clientes/mês pelo Google",
+    resultado: "12 ligações em 15 dias",
   },
   {
     texto: "Minha agenda vivia vazia. Depois que apareci no Google Maps, passei a receber pacientes que nem conheciam o consultório. Foi a melhor decisão.",
