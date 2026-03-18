@@ -27,7 +27,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-background/60">
               <li className="flex items-center gap-2">
                 <MessageCircle size={16} />
-                <a href="https://wa.me/5500000000000" className="hover:text-background transition-colors">(00) 00000-0000</a>
+                <a href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais." className="hover:text-background transition-colors">(62) 99171-5110</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />

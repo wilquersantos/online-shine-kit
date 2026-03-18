@@ -37,7 +37,7 @@ const CtaSection = () => {
               asChild
               className="text-base gap-2"
             >
-              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={20} /> Quero meu site agora
               </a>
             </Button>
