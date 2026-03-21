@@ -16,8 +16,8 @@ const CtaSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-accent/20 text-accent text-sm font-medium">
-            <Clock size={16} /> Vagas limitadas este mês
+          <span className="inline-flex items-center gap-2 px-5 py-2 mb-6 rounded-full bg-accent text-accent-foreground text-sm font-bold shadow-lg animate-pulse">
+            <Clock size={16} /> 🔥 Vagas limitadas este mês
           </span>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-background">
