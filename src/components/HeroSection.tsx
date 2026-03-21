@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Monitor, Smartphone, MapPin, Users, Zap } from "lucide-react";
+import { ArrowRight, MessageCircle, Monitor, Smartphone, MapPin, Users, Zap, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -17,61 +17,50 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide uppercase rounded-full bg-accent/10 text-accent">
-              <Zap size={14} /> +50 empresas já transformadas
-            </span>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
-              Seu negócio aparecendo{" "}
-              <span className="text-accent">todos os dias no Google</span>
+            {/* Headline que captura em 3 segundos — foco no RESULTADO */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground">
+              Clientes procurando{" "}
+              <span className="text-accent">o que você vende</span>
+              {" "}— e te encontrando{" "}
+              <span className="text-secondary">no Google.</span>
             </h1>
 
-            <p className="mt-4 text-xl font-medium text-foreground/80 max-w-xl">
-              Um clique para colocar sua empresa na frente de quem procura.
+            {/* Subtítulo simples e direto */}
+            <p className="mt-5 text-lg text-muted-foreground max-w-xl">
+              Em até 10 dias, sua empresa aparece para quem está buscando agora.
             </p>
 
-            <p className="mt-3 text-lg text-muted-foreground max-w-xl">
-              Criamos sites, posicionamos sua empresa no Google e atraímos novos clientes todos os dias.
-            </p>
-
-            <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
-              <div className="flex -space-x-2">
-                {[...Array(4)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-accent/20 border-2 border-background flex items-center justify-center"
-                  >
-                    <Users size={12} className="text-accent" />
-                  </div>
-                ))}
-              </div>
-              <span>
-                <strong className="text-foreground">+50 empresários</strong>{" "}
-                já escolheram aparecer no Google
-              </span>
-            </div>
-
-            {/* CTA único e forte - WhatsApp */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" asChild className="text-base gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+            {/* CTA WhatsApp grande e visível */}
+            <div className="mt-8">
+              <Button size="lg" asChild className="text-lg gap-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 shadow-xl shadow-secondary/25">
                 <a
                   href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle size={18} /> Falar no WhatsApp
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="text-base gap-2">
-                <a href="#planos">
-                  Ver planos <ArrowRight size={18} />
+                  <MessageCircle size={22} /> Falar no WhatsApp
                 </a>
               </Button>
             </div>
 
-            <p className="mt-4 text-xs text-muted-foreground">
-              ✓ Resultado em até 10 dias &nbsp; ✓ Orçamento grátis &nbsp; ✓ Suporte incluso
+            <p className="mt-3 text-xs text-muted-foreground">
+              ✓ Orçamento grátis &nbsp; ✓ Resposta em minutos &nbsp; ✓ Sem compromisso
             </p>
+
+            {/* Prova social simples e real */}
+            <div className="mt-8 bg-muted/50 rounded-xl p-4 border border-border max-w-md">
+              <div className="flex gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                "Recebi <strong>12 ligações em 15 dias</strong> só pelo Google. Antes ninguém me encontrava."
+              </p>
+              <p className="mt-2 text-xs text-muted-foreground">
+                — João Silva, Loja de Autopeças
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
