@@ -34,7 +34,7 @@ const ProvaSocialSection = () => {
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
             Não acredite só na gente.{" "}
-            <span className="text-primary">Veja o que nossos clientes dizem.</span>
+            <span className="text-accent">Veja o que nossos clientes dizem.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
             Empresários reais, com resultados reais.
@@ -51,14 +51,13 @@ const ProvaSocialSection = () => {
               transition={{ duration: 0.4, delay: i * 0.15 }}
               className="bg-card rounded-2xl p-8 border border-border shadow-sm text-left relative"
             >
-              <Quote size={32} className="text-primary/10 absolute top-6 right-6" />
+              <Quote size={32} className="text-accent/10 absolute top-6 right-6" />
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
                   <Star key={j} size={18} className="fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               <p className="text-foreground mb-4 leading-relaxed">"{d.texto}"</p>
-              {/* Resultado concreto - prova tangível */}
               <div className="bg-secondary/10 rounded-lg px-3 py-2 mb-4 inline-block">
                 <span className="text-sm font-bold text-secondary">📈 {d.resultado}</span>
               </div>

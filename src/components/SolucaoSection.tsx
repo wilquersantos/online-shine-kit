@@ -33,7 +33,8 @@ const SolucaoSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Nós fazemos seu telefone <span className="text-primary">tocar com clientes novos</span>
+            Seu negócio aparecendo no Google{" "}
+            <span className="text-accent">e atraindo clientes todos os dias</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             Enquanto você foca no que sabe fazer, nós colocamos sua empresa na frente de quem está procurando exatamente o que você oferece.
@@ -50,13 +51,12 @@ const SolucaoSection = () => {
               transition={{ duration: 0.4, delay: i * 0.15 }}
               className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group text-left"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <s.icon className="text-primary" size={28} />
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                <s.icon className="text-accent" size={28} />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{s.titulo}</h3>
               <p className="text-muted-foreground mb-4">{s.desc}</p>
-              {/* Resultado tangível - o que o cliente ganha */}
-              <div className="flex items-center gap-2 text-sm font-semibold text-primary">
+              <div className="flex items-center gap-2 text-sm font-semibold text-accent">
                 <ArrowRight size={16} />
                 {s.resultado}
               </div>
