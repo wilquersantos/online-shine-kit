@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Star, Rocket, Zap, Crown } from "lucide-react";
+import { Check, Star, Rocket, Zap, Crown, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const planos = [
@@ -8,7 +8,6 @@ const planos = [
     desc: "Para empresas que ainda não existem na internet",
     destaque: false,
     icon: Zap,
-    cor: "🟢",
     features: [
       "Site profissional até 5 páginas",
       "Design responsivo (celular e computador)",
@@ -31,7 +30,6 @@ const planos = [
     desc: "Para empresas que querem ser encontradas",
     destaque: true,
     icon: Star,
-    cor: "🔵",
     features: [
       "Tudo do plano Presença",
       "Criação ou otimização do Google Maps",
@@ -55,7 +53,6 @@ const planos = [
     desc: "Para empresas que querem atrair clientes rapidamente",
     destaque: false,
     icon: Rocket,
-    cor: "🟣",
     features: [
       "Tudo do plano anterior",
       "Criação de campanhas no Google Ads",
@@ -78,14 +75,12 @@ const planos = [
     desc: "Para empresas que querem crescer constantemente",
     destaque: false,
     icon: Crown,
-    cor: "🟠",
     features: [
       "Tudo do plano anterior",
       "Gestão mensal de anúncios",
       "SEO avançado",
       "Otimização contínua do Google Maps",
       "Criação de novas páginas de conversão",
-      
       "Relatórios mensais de resultados",
       "Estratégia digital contínua",
     ],
@@ -99,6 +94,9 @@ const planos = [
   },
 ];
 
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais.";
+
 const PlanosSection = () => {
   return (
     <section id="planos" className="py-16 md:py-24">
@@ -110,12 +108,10 @@ const PlanosSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Escolha o plano ideal{" "}
-            <span className="text-primary">para o momento do seu negócio</span>
+            Criação de site + Google + suporte
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
-            Do primeiro site à dominância digital na sua cidade. Comece pequeno
-            e cresça no seu ritmo.
+            Escolha o plano ideal para o momento do seu negócio. Do primeiro site à dominância digital na sua cidade.
           </p>
         </motion.div>
 
@@ -129,12 +125,12 @@ const PlanosSection = () => {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className={`rounded-2xl p-6 border text-left relative flex flex-col ${
                 p.destaque
-                  ? "bg-primary text-primary-foreground border-primary shadow-2xl lg:scale-105"
+                  ? "bg-foreground text-background border-foreground shadow-2xl lg:scale-105"
                   : "bg-card text-foreground border-border shadow-sm"
               }`}
             >
               {p.destaque && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
                   ⭐ MAIS ESCOLHIDO
                 </span>
               )}
@@ -142,13 +138,13 @@ const PlanosSection = () => {
               <div className="flex items-center gap-3 mb-4">
                 <div
                   className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                    p.destaque ? "bg-primary-foreground/20" : "bg-primary/10"
+                    p.destaque ? "bg-background/20" : "bg-accent/10"
                   }`}
                 >
                   <p.icon
                     size={20}
                     className={
-                      p.destaque ? "text-primary-foreground" : "text-primary"
+                      p.destaque ? "text-background" : "text-accent"
                     }
                   />
                 </div>
@@ -159,9 +155,7 @@ const PlanosSection = () => {
 
               <p
                 className={`text-sm mb-4 ${
-                  p.destaque
-                    ? "text-primary-foreground/80"
-                    : "text-muted-foreground"
+                  p.destaque ? "text-background/70" : "text-muted-foreground"
                 }`}
               >
                 {p.desc}
@@ -181,17 +175,14 @@ const PlanosSection = () => {
                 ))}
               </ul>
 
-              {/* Resultados */}
               <div
                 className={`rounded-lg p-3 mb-4 ${
-                  p.destaque ? "bg-primary-foreground/10" : "bg-muted/50"
+                  p.destaque ? "bg-background/10" : "bg-muted/50"
                 }`}
               >
                 <p
                   className={`text-xs font-semibold mb-2 ${
-                    p.destaque
-                      ? "text-primary-foreground/70"
-                      : "text-muted-foreground"
+                    p.destaque ? "text-background/60" : "text-muted-foreground"
                   }`}
                 >
                   Resultado
@@ -201,9 +192,7 @@ const PlanosSection = () => {
                     <li
                       key={k}
                       className={`text-xs ${
-                        p.destaque
-                          ? "text-primary-foreground/90"
-                          : "text-foreground/80"
+                        p.destaque ? "text-background/80" : "text-foreground/80"
                       }`}
                     >
                       📍 {r}
@@ -214,18 +203,21 @@ const PlanosSection = () => {
 
               <Button
                 asChild
-                variant={p.destaque ? "secondary" : "default"}
-                className="w-full"
+                className={`w-full gap-2 ${
+                  p.destaque
+                    ? "bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                    : "bg-foreground hover:bg-foreground/90 text-background"
+                }`}
                 size="lg"
               >
-                <a href="#contato">{p.cta}</a>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle size={16} /> {p.cta}
+                </a>
               </Button>
 
               <p
                 className={`text-center text-xs mt-3 ${
-                  p.destaque
-                    ? "text-primary-foreground/60"
-                    : "text-muted-foreground"
+                  p.destaque ? "text-background/50" : "text-muted-foreground"
                 }`}
               >
                 💰 {p.pagamento}
@@ -233,6 +225,23 @@ const PlanosSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Diagnóstico gratuito */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 bg-muted rounded-2xl p-8 max-w-2xl mx-auto"
+        >
+          <p className="text-lg font-bold text-foreground mb-2">Não sabe qual escolher?</p>
+          <p className="text-muted-foreground mb-4">Solicite um diagnóstico gratuito e descubra o melhor caminho para o seu negócio.</p>
+          <Button asChild size="lg" className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <MessageCircle size={18} /> Solicitar diagnóstico gratuito
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

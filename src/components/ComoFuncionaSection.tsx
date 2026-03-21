@@ -39,7 +39,7 @@ const ComoFuncionaSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Tão simples que você vai pensar: <span className="text-primary">"por que não fiz antes?"</span>
+            Tão simples que você vai pensar: <span className="text-accent">"por que não fiz antes?"</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
             Você não precisa entender de tecnologia. Nós cuidamos de tudo — do começo ao fim.
@@ -58,10 +58,10 @@ const ComoFuncionaSection = () => {
               transition={{ duration: 0.4, delay: i * 0.15 }}
               className="relative flex flex-col items-center"
             >
-              <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4 z-10 shadow-lg">
+              <div className="w-14 h-14 rounded-full bg-foreground text-background flex items-center justify-center mb-4 z-10 shadow-lg">
                 <p.icon size={24} />
               </div>
-              <span className="text-xs font-bold text-secondary mb-1 uppercase tracking-wider">
+              <span className="text-xs font-bold text-accent mb-1 uppercase tracking-wider">
                 {p.tempo}
               </span>
               <h3 className="text-lg font-bold text-foreground mb-2">{p.titulo}</h3>
