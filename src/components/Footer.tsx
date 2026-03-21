@@ -6,9 +6,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">ClickImpulso</h3>
+            <h3 className="text-xl font-bold mb-4">
+              Click<span className="text-accent">Impulso</span>
+            </h3>
             <p className="text-background/60 text-sm">
-              Colocamos sua empresa na internet para que você receba clientes todos os dias.
+              Seu negócio aparecendo no Google e atraindo clientes todos os dias.
             </p>
           </div>
 
@@ -27,15 +29,15 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-background/60">
               <li className="flex items-center gap-2">
                 <MessageCircle size={16} />
-                <a href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais." className="hover:text-background transition-colors">(62) 99171-5110</a>
+                <a href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">(62) 99171-5110</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
-                <a href="mailto:contato@digitalpro.com.br" className="hover:text-background transition-colors">contato@digitalpro.com.br</a>
+                <a href="mailto:contato@clickimpulso.com.br" className="hover:text-background transition-colors">contato@clickimpulso.com.br</a>
               </li>
               <li className="flex items-center gap-2">
                 <Instagram size={16} />
-                <a href="#" className="hover:text-background transition-colors">@digitalpro</a>
+                <a href="#" className="hover:text-background transition-colors">@clickimpulso</a>
               </li>
             </ul>
           </div>
