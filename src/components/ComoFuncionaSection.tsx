@@ -60,7 +60,7 @@ const ComoFuncionaSection = () => {
               transition={{ duration: 0.4, delay: i * 0.15 }}
               className="p-8 rounded-xl border border-slate-200 dark:border-white/5 bg-white/70 dark:bg-white/[0.02] hover:border-slate-300 dark:hover:bg-white/[0.04] transition-all relative group backdrop-blur-sm shadow-sm dark:shadow-none text-left"
             >
-              <div className="text-5xl font-bold text-slate-200 dark:text-white/20 absolute right-4 top-4 group-hover:text-blue-400/30 transition-colors">
+              <div className="text-5xl font-bold text-slate-300 dark:text-white/40 absolute right-4 top-4 group-hover:text-blue-400/50 transition-colors">
                 {p.num}
               </div>
               <div className="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-6 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20">
