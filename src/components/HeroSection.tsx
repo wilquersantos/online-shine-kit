@@ -58,12 +58,13 @@ const HeroSection = () => {
           className="flex flex-col md:flex-row items-center justify-center gap-5 relative z-20"
         >
           {/* Primary CTA - WhatsApp */}
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-all font-semibold text-base shadow-lg shadow-emerald-500/20 active:scale-95 w-full md:w-auto justify-center"
-          >
+          <div className="btn-glow-border group w-full md:w-auto shadow-lg shadow-emerald-500/10">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10 inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-[#0a0a0c] text-white rounded-[5px] transition-all font-semibold text-base active:scale-95 w-full md:w-auto justify-center hover:bg-slate-800 dark:hover:bg-[#121215]"
+            >
             <MessageCircle size={20} /> Falar no WhatsApp
           </a>
 
