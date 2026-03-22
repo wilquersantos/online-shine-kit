@@ -63,7 +63,7 @@ const HeroSection = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative z-10 inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-[#0a0a0c] text-white rounded-[5px] transition-all font-semibold text-base active:scale-95 w-full md:w-auto justify-center hover:bg-slate-800 dark:hover:bg-[#121215]"
+              className="relative z-10 inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-[5px] transition-all font-semibold text-base active:scale-95 w-full md:w-auto justify-center"
             >
               <MessageCircle size={20} /> Falar no WhatsApp
             </a>
