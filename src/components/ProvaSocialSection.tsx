@@ -24,24 +24,24 @@ const depoimentos = [
 
 const ProvaSocialSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative z-20 py-24 bg-white/50 dark:bg-[#020204]/90 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-serif text-slate-900 dark:text-white">
             Não acredite só na gente.{" "}
-            <span className="text-accent">Veja o que nossos clientes dizem.</span>
+            <span className="text-blue-600 dark:text-blue-400">Veja o que nossos clientes dizem.</span>
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
+          <p className="mt-4 text-base font-light text-slate-600 dark:text-slate-400">
             Empresários reais, com resultados reais.
           </p>
         </motion.div>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-8">
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
           {depoimentos.map((d, i) => (
             <motion.div
               key={i}
@@ -49,21 +49,25 @@ const ProvaSocialSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-8 border border-border shadow-sm text-left relative"
+              className="relative p-px rounded-xl bg-gradient-to-b from-slate-200 to-slate-100 dark:from-white/10 dark:to-white/5 shadow-lg"
             >
-              <Quote size={32} className="text-accent/10 absolute top-6 right-6" />
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} size={18} className="fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-foreground mb-4 leading-relaxed">"{d.texto}"</p>
-              <div className="bg-secondary/10 rounded-lg px-3 py-2 mb-4 inline-block">
-                <span className="text-sm font-bold text-secondary">📈 {d.resultado}</span>
-              </div>
-              <div>
-                <p className="font-bold text-foreground">{d.nome}</p>
-                <p className="text-sm text-muted-foreground">{d.empresa}</p>
+              <div className="bg-white dark:bg-[#0e0e10] rounded-[11px] p-6 text-left h-full flex flex-col">
+                <Quote size={28} className="text-blue-500/10 dark:text-blue-400/10 mb-3" />
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} size={14} className="fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-sm text-slate-700 dark:text-slate-200 mb-4 leading-relaxed flex-1">"{d.texto}"</p>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-500/30 mb-4 self-start">
+                  <span className="text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-300 font-bold">
+                    📈 {d.resultado}
+                  </span>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">{d.nome}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">{d.empresa}</p>
+                </div>
               </div>
             </motion.div>
           ))}
