@@ -88,7 +88,7 @@ const HeroSection = () => {
           transition={{ delay: 0.5 }}
           className="mt-4 text-xs text-slate-400 dark:text-slate-500"
         >
-          ✓ Orçamento grátis &nbsp; ✓ Resposta em minutos &nbsp; ✓ Sem compromisso
+          ✓ Orçamento grátis &nbsp; ✓ Resposta em minutos &nbsp; ✓ Cancele quando quiser
         </motion.p>
 
         {/* Social Proof Card */}
