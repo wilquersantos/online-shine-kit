@@ -53,7 +53,8 @@ const Navbar = () => {
             className="relative z-10 inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 dark:bg-[#0a0a0c] text-white rounded-[5px] transition-all font-medium text-sm active:scale-95 hover:bg-slate-800 dark:hover:bg-[#121215]"
           >
             <MessageCircle size={16} /> Falar no WhatsApp
-        </a>
+          </a>
+        </div>
       </div>
 
       <button className="md:hidden text-slate-600 dark:text-slate-400" onClick={() => setOpen(!open)}>
