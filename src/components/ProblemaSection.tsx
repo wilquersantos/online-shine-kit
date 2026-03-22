@@ -26,23 +26,26 @@ const dores = [
 
 const ProblemaSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="relative z-20 py-24 bg-white/50 dark:bg-[#020204]/90 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 rounded-full bg-accent/10 text-accent text-sm font-medium">
-            <AlertTriangle size={16} /> Isso está acontecendo com você?
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-red-500/20 bg-red-500/10 dark:bg-red-500/5 text-[11px] font-medium mb-6 text-red-600 dark:text-red-400 backdrop-blur-sm">
+            <AlertTriangle size={14} />
+            <span>Isso está acontecendo com você?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Enquanto você lê isso, alguém está pesquisando no Google<br className="hidden md:block" />
-            <span className="text-accent"> o que você vende — e encontrando seu concorrente.</span>
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-serif text-slate-900 dark:text-white">
+            Enquanto você lê isso, alguém está pesquisando no Google
+            <br className="hidden md:block" />
+            <span className="text-blue-600 dark:text-blue-400"> o que você vende — e encontrando seu concorrente.</span>
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
-            97% dos consumidores pesquisam online antes de comprar. Se sua empresa não aparece, ela simplesmente <strong className="text-foreground">não existe</strong> para essas pessoas.
+          <p className="mt-4 text-base font-light text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            97% dos consumidores pesquisam online antes de comprar. Se sua empresa não aparece, ela simplesmente{" "}
+            <span className="text-slate-900 dark:text-white font-medium">não existe</span> para essas pessoas.
           </p>
         </motion.div>
 
@@ -54,13 +57,13 @@ const ProblemaSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-card rounded-xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow text-left"
+              className="p-6 rounded-xl border border-slate-200 dark:border-white/5 bg-white/70 dark:bg-white/[0.02] hover:border-slate-300 dark:hover:bg-white/[0.04] transition-all relative group backdrop-blur-sm shadow-sm dark:shadow-none text-left"
             >
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                <dor.icon className="text-accent" size={24} />
+              <div className="w-12 h-12 rounded-full bg-red-50 dark:bg-red-500/10 flex items-center justify-center mb-4 text-red-500 dark:text-red-400 border border-red-100 dark:border-red-500/20">
+                <dor.icon size={22} />
               </div>
-              <p className="font-semibold text-foreground mb-2">{dor.text}</p>
-              <p className="text-sm text-accent/80 font-medium">→ {dor.impacto}</p>
+              <p className="text-sm font-semibold text-slate-900 dark:text-white mb-2">{dor.text}</p>
+              <p className="text-xs text-red-600 dark:text-red-400 font-medium">→ {dor.impacto}</p>
             </motion.div>
           ))}
         </div>
@@ -70,9 +73,9 @@ const ProblemaSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-lg font-semibold text-foreground"
+          className="mt-12 text-lg font-medium text-slate-900 dark:text-white"
         >
-          A boa notícia? <span className="text-secondary">Isso tem solução — e é mais simples do que você imagina.</span>
+          A boa notícia? <span className="text-emerald-600 dark:text-emerald-400">Isso tem solução — e é mais simples do que você imagina.</span>
         </motion.p>
       </div>
     </section>

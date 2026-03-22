@@ -1,57 +1,65 @@
 import { MessageCircle, Mail, Instagram, MapPin } from "lucide-react";
 
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais.";
+
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative z-20 border-t border-slate-200 dark:border-white/5 bg-white/70 dark:bg-[#020204]/90 backdrop-blur-sm py-12">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              Click<span className="text-accent">Impulso</span>
-            </h3>
-            <p className="text-background/60 text-sm">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-blue-500/20 dark:to-emerald-500/20 rounded-lg border border-slate-200 dark:border-white/10">
+                <span className="text-blue-600 dark:text-blue-400 font-bold text-xs">CI</span>
+              </div>
+              <span className="text-sm font-bold text-slate-900 dark:text-white">
+                CLICK<span className="text-blue-600 dark:text-blue-400">IMPULSO</span>
+              </span>
+            </div>
+            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
               Seu negócio aparecendo no Google e atraindo clientes todos os dias.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Links Rápidos</h4>
-            <ul className="space-y-2 text-sm text-background/60">
-              <li><a href="#solucao" className="hover:text-background transition-colors">Serviços</a></li>
-              <li><a href="#como-funciona" className="hover:text-background transition-colors">Como Funciona</a></li>
-              <li><a href="#portfolio" className="hover:text-background transition-colors">Portfólio</a></li>
-              <li><a href="#planos" className="hover:text-background transition-colors">Planos</a></li>
+            <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">Links Rápidos</h4>
+            <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+              <li><a href="#solucao" className="hover:text-slate-900 dark:hover:text-white transition-colors">Serviços</a></li>
+              <li><a href="#como-funciona" className="hover:text-slate-900 dark:hover:text-white transition-colors">Como Funciona</a></li>
+              <li><a href="#portfolio" className="hover:text-slate-900 dark:hover:text-white transition-colors">Portfólio</a></li>
+              <li><a href="#planos" className="hover:text-slate-900 dark:hover:text-white transition-colors">Planos</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contato</h4>
-            <ul className="space-y-3 text-sm text-background/60">
+            <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">Contato</h4>
+            <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
               <li className="flex items-center gap-2">
-                <MessageCircle size={16} />
-                <a href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais." target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">(62) 99171-5110</a>
+                <MessageCircle size={14} className="text-emerald-500" />
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">(62) 99171-5110</a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={16} />
-                <a href="mailto:contato@clickimpulso.com.br" className="hover:text-background transition-colors">contato@clickimpulso.com.br</a>
+                <Mail size={14} className="text-blue-500" />
+                <a href="mailto:contato@clickimpulso.com.br" className="hover:text-slate-900 dark:hover:text-white transition-colors">contato@clickimpulso.com.br</a>
               </li>
               <li className="flex items-center gap-2">
-                <Instagram size={16} />
-                <a href="#" className="hover:text-background transition-colors">@clickimpulso</a>
+                <Instagram size={14} className="text-purple-500" />
+                <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">@clickimpulso</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Localização</h4>
-            <p className="flex items-start gap-2 text-sm text-background/60">
-              <MapPin size={16} className="mt-0.5 shrink-0" />
+            <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-4">Localização</h4>
+            <p className="flex items-start gap-2 text-sm text-slate-500 dark:text-slate-400">
+              <MapPin size={14} className="mt-0.5 shrink-0 text-blue-500" />
               Atendimento em todo o Brasil
             </p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-background/10 text-center text-sm text-background/40">
+        <div className="mt-12 pt-8 border-t border-slate-200 dark:border-white/5 text-center text-xs text-slate-400 dark:text-slate-500 font-mono tracking-wide">
           © {new Date().getFullYear()} ClickImpulso. Todos os direitos reservados.
         </div>
       </div>

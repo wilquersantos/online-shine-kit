@@ -10,30 +10,34 @@ const projetos = [
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="portfolio" className="relative z-20 py-24 bg-white/50 dark:bg-[#020204]/90 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-serif text-slate-900 dark:text-white">
             Alguns projetos que já desenvolvemos
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-base font-light text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Confira exemplos de sites e configurações que criamos para nossos clientes.
           </p>
         </motion.div>
 
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {projetos.map((p, i) => (
-            <a
+            <motion.a
               key={i}
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all block"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-[#050505]/80 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl backdrop-blur-sm block"
             >
               <div className="h-52 sm:h-60 overflow-hidden">
                 <img
@@ -45,12 +49,12 @@ const PortfolioSection = () => {
               </div>
               <div className="p-5 flex items-center justify-between">
                 <div className="text-left">
-                  <h3 className="font-bold text-foreground">{p.nome}</h3>
-                  <p className="text-sm text-muted-foreground">{p.tipo}</p>
+                  <h3 className="font-semibold text-slate-900 dark:text-white">{p.nome}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{p.tipo}</p>
                 </div>
-                <ExternalLink className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
+                <ExternalLink className="text-slate-400 group-hover:text-blue-500 transition-colors" size={20} />
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

@@ -1,124 +1,117 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Monitor, Smartphone, MapPin, Users, Zap, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MessageCircle, Star, ArrowRight } from "lucide-react";
+
+const WHATSAPP_URL =
+  "https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais.";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-3xl" />
-      </div>
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-20 px-6 z-10">
+      <div className="z-20 text-center max-w-5xl mx-auto relative">
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/10 dark:bg-blue-500/5 text-[11px] font-medium mb-6 shadow-[0_0_20px_rgba(59,130,246,0.15)] text-blue-700 dark:text-blue-300 backdrop-blur-sm"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-blue-400" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+          </span>
+          <span>Vagas limitadas este mês</span>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center text-center z-20 mt-2 mb-6"
+        >
+          <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-slate-900 dark:text-white leading-[0.95] bg-clip-text text-transparent bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-white dark:to-white/80 drop-shadow-sm pb-2 md:pb-3">
+            Clientes procurando
+          </span>
+          <span className="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif italic font-light text-slate-500 dark:text-slate-400/90 tracking-tight mt-1 md:-mt-2">
+            o que você vende — e te encontrando
+          </span>
+          <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-emerald-500 dark:from-blue-400 dark:to-emerald-400 pb-2">
+            no Google.
+          </span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="leading-relaxed text-base md:text-lg max-w-2xl mx-auto mb-10 font-light text-slate-600 dark:text-slate-400"
+        >
+          Em até <span className="text-slate-900 dark:text-white font-medium">10 dias</span>, sua empresa aparece para quem está buscando agora. Sem burocracia, sem enrolação.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex flex-col md:flex-row items-center justify-center gap-5 relative z-20"
+        >
+          {/* Primary CTA - WhatsApp */}
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-all font-semibold text-base shadow-lg shadow-emerald-500/20 active:scale-95 w-full md:w-auto justify-center"
           >
-            {/* Headline que captura em 3 segundos — foco no RESULTADO */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground">
-              Clientes procurando{" "}
-              <span className="text-accent">o que você vende</span>
-              {" "}— e te encontrando{" "}
-              <span className="text-secondary">no Google.</span>
-            </h1>
+            <MessageCircle size={20} /> Falar no WhatsApp
+          </a>
 
-            {/* Subtítulo simples e direto */}
-            <p className="mt-5 text-lg text-muted-foreground max-w-xl">
-              Em até 10 dias, sua empresa aparece para quem está buscando agora.
-            </p>
+          {/* Secondary CTA */}
+          <a
+            href="#solucao"
+            className="group flex transition-all md:w-auto text-sm font-medium bg-white/80 dark:bg-[#0a0a0b] w-full border border-slate-200 dark:border-transparent rounded-md py-3 px-6 gap-2 items-center justify-center hover:text-slate-900 dark:hover:text-white text-slate-500 dark:text-slate-400 active:scale-95 shadow-sm dark:shadow-none backdrop-blur-sm"
+          >
+            <ArrowRight size={16} className="text-slate-400 dark:text-slate-500 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
+            <span className="border-b border-transparent group-hover:border-slate-500 transition-all">
+              Conhecer os serviços
+            </span>
+          </a>
+        </motion.div>
 
-            {/* CTA WhatsApp grande e visível */}
-            <div className="mt-8">
-              <Button size="lg" asChild className="text-lg gap-3 bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 shadow-xl shadow-secondary/25">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5562991715110&text=Ol%C3%A1%2C%20desejo%20colocar%20minha%20empresa%20na%20internet!%0AGostaria%20de%20saber%20mais."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle size={22} /> Falar no WhatsApp
-                </a>
-              </Button>
-            </div>
+        {/* Trust badges */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-4 text-xs text-slate-400 dark:text-slate-500"
+        >
+          ✓ Orçamento grátis &nbsp; ✓ Resposta em minutos &nbsp; ✓ Sem compromisso
+        </motion.p>
 
-            <p className="mt-3 text-xs text-muted-foreground">
-              ✓ Orçamento grátis &nbsp; ✓ Resposta em minutos &nbsp; ✓ Sem compromisso
-            </p>
-
-            {/* Prova social simples e real */}
-            <div className="mt-8 bg-muted/50 rounded-xl p-4 border border-border max-w-md">
+        {/* Social Proof Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-10 max-w-md mx-auto"
+        >
+          <div className="relative p-px rounded-xl bg-gradient-to-b from-slate-200 to-slate-100 dark:from-white/10 dark:to-white/5 shadow-lg">
+            <div className="bg-white dark:bg-[#0e0e10] rounded-[11px] p-5 text-left">
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-sm text-foreground leading-relaxed">
+              <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">
                 "Recebi <strong>12 ligações em 15 dias</strong> só pelo Google. Antes ninguém me encontrava."
               </p>
-              <p className="mt-2 text-xs text-muted-foreground">
+              <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
                 — João Silva, Loja de Autopeças
               </p>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative">
-              <div className="bg-card rounded-2xl shadow-2xl border border-border p-3">
-                <div className="flex gap-1.5 mb-3">
-                  <div className="w-3 h-3 rounded-full bg-accent/60" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
-                  <div className="w-3 h-3 rounded-full bg-secondary/60" />
-                </div>
-                <div className="bg-muted rounded-lg p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Monitor className="text-foreground" size={28} />
-                    <div className="h-3 w-32 bg-foreground/20 rounded" />
-                  </div>
-                  <div className="h-2 w-full bg-border rounded" />
-                  <div className="h-2 w-3/4 bg-border rounded" />
-                  <div className="grid grid-cols-3 gap-3 mt-4">
-                    <div className="h-20 bg-accent/10 rounded-lg" />
-                    <div className="h-20 bg-secondary/10 rounded-lg" />
-                    <div className="h-20 bg-accent/10 rounded-lg" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -left-8 w-36 bg-card rounded-2xl shadow-xl border border-border p-2">
-                <div className="bg-muted rounded-lg p-3 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="text-secondary" size={16} />
-                    <div className="h-2 w-12 bg-secondary/20 rounded" />
-                  </div>
-                  <div className="h-1.5 w-full bg-border rounded" />
-                  <div className="h-1.5 w-2/3 bg-border rounded" />
-                </div>
-              </div>
-
-              <div className="absolute -top-4 -right-4 bg-foreground text-background rounded-xl px-4 py-2 shadow-lg flex items-center gap-2 text-sm font-semibold">
-                <Smartphone size={16} />
-                100% Responsivo
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.2, repeat: Infinity, repeatType: "reverse", repeatDelay: 3 }}
-                className="absolute -bottom-4 -right-6 bg-card rounded-xl px-4 py-2.5 shadow-xl border border-border flex items-center gap-2"
-              >
-                <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                <span className="text-xs font-medium text-foreground">Novo cliente encontrou você!</span>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
