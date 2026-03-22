@@ -17,18 +17,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 border-b bg-white/70 dark:bg-[#020204]/70 backdrop-blur-xl border-slate-200 dark:border-white/5 transition-all duration-300">
-      <a href="#" className="flex items-center gap-2 group">
-        <div className="relative flex items-center justify-center w-9 h-9 transition-transform group-active:scale-95 bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-blue-500/20 dark:to-emerald-500/20 rounded-lg border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-none">
-          <span className="text-blue-600 dark:text-blue-400 font-bold text-sm">CI</span>
-        </div>
-        <div className="flex flex-col">
-          <span className="text-sm tracking-tight font-bold text-slate-900 dark:text-white leading-none">
-            CLICK<span className="text-blue-600 dark:text-blue-400">IMPULSO</span>
-          </span>
-          <span className="text-[9px] tracking-widest text-blue-600 dark:text-blue-400 uppercase font-mono mt-0.5">
-            Presença Digital
-          </span>
-        </div>
+      <a href="#" className="flex flex-col group">
+        <span className="text-sm tracking-tight font-bold text-slate-900 dark:text-white leading-none">
+          CLICK<span className="text-blue-600 dark:text-blue-400">IMPULSO</span>
+        </span>
+        <span className="text-[9px] tracking-widest text-blue-600 dark:text-blue-400 uppercase font-mono mt-0.5">
+          Presença Digital
+        </span>
       </a>
 
       {/* Desktop nav */}
