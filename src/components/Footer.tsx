@@ -9,12 +9,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-blue-500/20 dark:to-emerald-500/20 rounded-lg border border-slate-200 dark:border-white/10">
-                <span className="text-blue-600 dark:text-blue-400 font-bold text-xs">CI</span>
-              </div>
+            <div className="flex flex-col mb-4">
               <span className="text-sm font-bold text-slate-900 dark:text-white">
                 CLICK<span className="text-blue-600 dark:text-blue-400">IMPULSO</span>
+              </span>
+              <span className="text-[9px] tracking-widest text-blue-600 dark:text-blue-400 uppercase font-mono mt-0.5">
+                Presença Digital
               </span>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
